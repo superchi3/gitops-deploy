@@ -1,0 +1,13 @@
+#ensures that volume app=webserver will always be on the same node
+apiVersion: portworx.io/v1beta2
+kind: VolumePlacementStrategy
+metadata:
+  name: webserver-volume-affinity
+spec:
+  volumeAffinity:
+    - matchExpressions:
+      - key: app
+        operator: In
+        values:
+          - webserver
+
