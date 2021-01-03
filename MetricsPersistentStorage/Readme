@@ -1,0 +1,1 @@
+# oc create configmap cluster-monitoring-config --from-file config.yaml=persistent-storage.yml -n openshift-monitoring

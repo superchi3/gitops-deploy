@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: storage      
+  namespace: test    
+spec:
+  hard:
+    persistentvolumeclaims: 4  
+    requests.storage: 100G 

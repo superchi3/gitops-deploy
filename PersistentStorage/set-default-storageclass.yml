@@ -1,0 +1,4 @@
+#oc patch storageclass nfs-storage -p "$(cat set-default-storageclass.yml)"
+metadata:
+  annotations:
+    storageclass.kubernetes.io/is-default-class: "true"
